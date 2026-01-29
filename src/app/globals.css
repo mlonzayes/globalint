@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* TailwindCSS v4 Custom Theme - Define colors as Tailwind utilities */
+@theme {
+  /* Primary Colors */
+  --color-primary-blue: #0041e6;
+  --color-primary-light-blue: #0041e619;
+  --color-primary-medium-blue: #0041e633;
+  --color-accent-blue: #00a4e6;
+  --color-accent-light-blue: #00a4e60c;
+
+  /* Text Colors */
+  --color-text-primary: #0c111d;
+  --color-text-secondary: #5e7f8d;
+  --color-text-muted: #6b7280;
+  --color-text-light: #9ca3af;
+  --color-text-inverse: #ffffff;
+  --color-text-accent: #0041e6;
+
+  /* Background Colors */
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f5f6f8;
+  --color-background-overlay: #d9d9d926;
+  --color-header-background: #ffffff;
+  --color-footer-background: #0f1d23;
+
+  /* Border Colors */
+  --color-border-primary: #dae3e7;
+  --color-border-secondary: #e5e7eb;
+  --color-border-light: #f3f4f6;
+  --color-border-accent: #0041e6;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@layer base {
+  :root {
+    /* Typography Variables */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 24px;
+    --font-size-3xl: 30px;
+    --font-size-4xl: 36px;
+    --font-size-5xl: 48px;
+
+    /* Font Weight Variables */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Line Height Variables */
+    --line-height-xs: 15px;
+    --line-height-sm: 17px;
+    --line-height-base: 20px;
+    --line-height-lg: 22px;
+    --line-height-xl: 25px;
+    --line-height-2xl: 32px;
+    --line-height-3xl: 36px;
+    --line-height-4xl: 40px;
+
+    /* Letter Spacing Variables */
+    --letter-spacing-tight: 1px;
+    --letter-spacing-wide: 2px;
+
+    /* Spacing Variables */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    --spacing-4xl: 80px;
+    --spacing-5xl: 120px;
+
+    /* Border Radius Variables */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-full: 40px;
+
+    /* Component-specific Variables */
+    --header-margin: 124px;
+    --button-padding: 16px;
+    --footer-padding: 106px;
+    --list-gap: 30px;
+  }
+}
