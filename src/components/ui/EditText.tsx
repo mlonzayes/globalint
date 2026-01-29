@@ -25,7 +25,7 @@ const editTextClasses = cva(
     }
 )
 
-interface EditTextProps extends InputHTMLAttributes<HTMLInputElement>, VariantProps<typeof editTextClasses> {
+interface EditTextProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>, VariantProps<typeof editTextClasses> {
     // Required parameters with defaults
     placeholder?: string;
     text_font_size?: string;
