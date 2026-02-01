@@ -32,13 +32,13 @@ const ContactSection = () => {
     return (
         <section id="contact-section" className="w-full py-16 sm:py-24 bg-[#EAF7FC]">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+                <div className="bg-white rounded-3xl p-6 sm:p-12 lg:p-16 shadow-2xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
                         {/* Contact Information */}
                         <div className="space-y-8">
                             <div>
                                 <span className="text-sm font-bold tracking-widest text-[#2D8CBA] uppercase">Contacto</span>
-                                <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black text-[#0F1D23] leading-tight">
+                                <h2 className="mt-2 text-2xl sm:text-4xl lg:text-5xl font-normal text-[#0F1D23] leading-tight">
                                     ¿Hablamos de tu próximo proyecto?
                                 </h2>
                                 <p className="mt-4 text-lg text-gray-600">
@@ -95,7 +95,7 @@ const ContactSection = () => {
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-gray-50 rounded-2xl p-6 sm:p-8 border border-gray-100"
+                            className="bg-gray-50 rounded-2xl p-5 sm:p-8 border border-gray-100"
                         >
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -107,7 +107,7 @@ const ContactSection = () => {
                                             name="firstName"
                                             value={formData.firstName}
                                             onChange={handleInputChange}
-                                            className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all"
+                                            className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all"
                                             required
                                         />
                                     </div>
@@ -119,7 +119,7 @@ const ContactSection = () => {
                                             name="lastName"
                                             value={formData.lastName}
                                             onChange={handleInputChange}
-                                            className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all"
+                                            className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all"
                                             required
                                         />
                                     </div>
@@ -133,7 +133,7 @@ const ContactSection = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all"
+                                        className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all"
                                         required
                                     />
                                 </div>
@@ -145,7 +145,7 @@ const ContactSection = () => {
                                         name="service"
                                         value={formData.service}
                                         onChange={handleInputChange}
-                                        className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all appearance-none"
+                                        className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all appearance-none"
                                         required
                                     >
                                         <option value="">Seleccionar opción</option>
@@ -164,7 +164,7 @@ const ContactSection = () => {
                                         onChange={handleInputChange}
                                         placeholder="Cuéntanos sobre tu necesidad..."
                                         rows={4}
-                                        className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all"
+                                        className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-base sm:text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#2D8CBA] focus:border-transparent transition-all"
                                         required
                                     />
                                 </div>

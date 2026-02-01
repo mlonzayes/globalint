@@ -15,15 +15,7 @@ const Footer = ({ className = '' }: FooterProps) => {
 
                     {/* Column 1: Brand & Socials */}
                     <div className="flex flex-col items-start gap-6">
-                        <div className="bg-white p-3 rounded-lg inline-block">
-                            <Image
-                                src="/logo.png"
-                                alt="Global International Trade Logo"
-                                width={180}
-                                height={70}
-                                className="h-auto w-auto max-w-[160px]"
-                            />
-                        </div>
+                        {/* Logo Removed */}
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                             Tu socio estratégico en comercio exterior. Soluciones integrales para potenciar tu negocio global.
                         </p>

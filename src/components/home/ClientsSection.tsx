@@ -50,7 +50,7 @@ const ClientsSection = () => {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-3xl sm:text-4xl font-black text-[#0F1D23]"
+                    className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0F1D23]"
                 >
                     Nuestros clientes
                 </motion.h2>

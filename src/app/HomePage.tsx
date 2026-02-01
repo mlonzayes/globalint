@@ -22,8 +22,8 @@ export default function HomePage() {
                 <HeroSection />
                 <AboutSection />
                 <MissionVisionValues />
-                <ServicesSection />
                 <IndustriesSection />
+                <ServicesSection />
                 <ClientsSection />
                 <CTASection />
                 <ContactSection />

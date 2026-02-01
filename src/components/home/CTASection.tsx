@@ -22,7 +22,7 @@ const CTASection = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight"
+                            className="text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-6 leading-tight"
                         >
                             ¿Listo para llevar tu operación <span className="text-[#33C9F4]">al siguiente nivel?</span>
                         </motion.h2>

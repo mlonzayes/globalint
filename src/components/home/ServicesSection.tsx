@@ -1,8 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaGlobeAmericas, FaBriefcase, FaFileContract } from 'react-icons/fa';
-import Image from 'next/image';
 
 interface Service {
     id: number;
@@ -12,6 +12,12 @@ interface Service {
 }
 
 const services: Service[] = [
+    {
+        id: 3,
+        title: 'Despacho de Aduana',
+        description: 'Gestionamos toda la operatoria, documentación y logística para que tu mercadería llegue a destino de forma segura.',
+        icon: <FaFileContract className="w-8 h-8" />
+    },
     {
         id: 1,
         title: 'Logística Integral',
@@ -23,20 +29,28 @@ const services: Service[] = [
         title: 'Terciarización Comex',
         description: 'Outsourcing en comercio exterior para que te enfoques en lo estratégico. Nos ocupamos de toda la operatoria con eficiencia.',
         icon: <FaBriefcase className="w-8 h-8" />
-    },
-    {
-        id: 3,
-        title: 'Despacho de Aduana',
-        description: 'Gestionamos toda la operatoria, documentación y logística para que tu mercadería llegue a destino de forma segura.',
-        icon: <FaFileContract className="w-8 h-8" />
     }
 ]
 
 const ServicesSection = () => {
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    });
+
+    const y1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
     return (
-        <section className="w-full py-8 sm:py-24 bg-white">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-10">
+        <section ref={containerRef} className="w-full py-16 sm:py-24 bg-[#0F1D23] relative overflow-hidden">
+
+            {/* Parallax Background Elements */}
+            <motion.div style={{ y: y1 }} className="absolute top-0 left-0 w-96 h-96 bg-[#2D8CBA]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+            <motion.div style={{ y: y2 }} className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#33C9F4]/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
+
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="text-center mb-16">
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +64,7 @@ const ServicesSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="mt-2 text-xl sm:text-4xl lg:text-5xl font-black text-[#0F1D23] mb-4"
+                        className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-6"
                     >
                         Servicios
                     </motion.h2>
@@ -59,7 +73,7 @@ const ServicesSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-lg text-gray-600 max-w-2xl mx-auto"
+                        className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed"
                     >
                         Simplificamos la logística global y el comercio internacional a través de procesos ágiles, seguros y totalmente transparentes.
                     </motion.p>
@@ -73,27 +87,28 @@ const ServicesSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            whileHover={{ y: -5 }}
-                            className="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:bg-white hover:shadow-xl hover:border-[#2D8CBA]/30 transition-all duration-300 group"
+                            whileHover={{ y: -10 }}
+                            className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-[#2D8CBA]/50 transition-all duration-300 group cursor-default flex flex-col h-full"
                         >
-                            <div className="w-16 h-16 bg-[#2D8CBA]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#2D8CBA] transition-colors duration-300">
-                                <div className="text-[#2D8CBA] group-hover:text-white transition-colors duration-300">
+                            <div className="w-16 h-16 bg-[#2D8CBA]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#2D8CBA] transition-colors duration-300">
+                                <div className="text-[#33C9F4] group-hover:text-white transition-colors duration-300">
                                     {service.icon}
                                 </div>
                             </div>
 
-                            <h3 className="text-xl font-bold text-[#0F1D23] mb-4 group-hover:text-[#2D8CBA] transition-colors">
+                            <h3 className="text-xl font-bold text-white mb-4">
                                 {service.title}
                             </h3>
 
-                            <p className="text-gray-600 leading-relaxed font-medium">
+                            <p className="text-gray-400 leading-relaxed font-medium mb-8 flex-grow">
                                 {service.description}
                             </p>
 
-                            <div className="mt-6 pt-6 border-t border-gray-200">
-                                <a href="#" className="inline-flex items-center text-sm font-bold text-[#2D8CBA] hover:text-[#237ba5] transition-colors">
+                            <div className="pt-6 border-t border-white/10 group-hover:border-[#2D8CBA]/30 transition-colors mt-auto">
+                                <a href={`/servicios?service=${service.id === 3 ? 'despacho' : service.id === 1 ? 'logistica' : 'terciarizacion'}`}
+                                    className="inline-flex items-center text-sm font-bold text-[#33C9F4] group-hover:text-white transition-colors">
                                     Ver más
-                                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
                                 </a>

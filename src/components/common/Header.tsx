@@ -1,14 +1,17 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface HeaderProps {
     className?: string;
+    forceScrolled?: boolean;
 }
 
-const Header = ({ className = '' }: HeaderProps) => {
+const Header = ({ className = '', forceScrolled = false }: HeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+    const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,13 +23,14 @@ const Header = ({ className = '' }: HeaderProps) => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
+        setIsServicesMenuOpen(false) // Reset sub-menu on close
     }
 
     return (
         <>
             <header
-                className={`fixed top-0 z-50 transition-all duration-300 ease-in-out ${scrolled
-                    ? 'top-2 sm:top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1200px] bg-white/95 backdrop-blur-md shadow-md rounded-full py-2 px-6'
+                className={`fixed top-0 z-50 transition-all duration-300 ease-in-out ${scrolled || forceScrolled
+                    ? 'top-2 sm:top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1200px] bg-white/95 backdrop-blur-md shadow-md rounded-full py-4 px-8'
                     : 'top-0 left-0 right-0 bg-transparent py-6 w-full'
                     } ${className}`}
             >
@@ -66,15 +70,17 @@ const Header = ({ className = '' }: HeaderProps) => {
 
                     {/* Desktop Navigation - Absolute Center */}
                     <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center space-x-8">
-                        <button
+                        <Link
+                            href="/"
                             className="text-sm font-medium text-text-primary hover:text-primary-blue transition-colors duration-200"
                             role="menuitem"
                         >
                             Inicio
-                        </button>
+                        </Link>
 
                         <div className="relative group">
-                            <button
+                            <Link
+                                href="/servicios"
                                 className="flex items-center gap-1 text-sm font-medium text-text-primary hover:text-primary-blue transition-colors duration-200"
                                 role="menuitem"
                                 aria-haspopup="true"
@@ -89,43 +95,45 @@ const Header = ({ className = '' }: HeaderProps) => {
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                 </svg>
-                            </button>
+                            </Link>
 
                             {/* Dropdown Menu */}
                             <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
                                 <ul role="menu" className="py-2">
                                     <li role="menuitem">
-                                        <a href="/servicios" className="block px-4 py-2 text-sm text-text-primary hover:bg-gray-50 hover:text-primary-blue transition-colors">
-                                            Logística Integral
-                                        </a>
-                                    </li>
-                                    <li role="menuitem">
-                                        <a href="/servicios" className="block px-4 py-2 text-sm text-text-primary hover:bg-gray-50 hover:text-primary-blue transition-colors">
+                                        <Link href="/servicios?service=despacho" className="block px-4 py-2 text-sm text-text-primary hover:bg-gray-50 hover:text-primary-blue transition-colors">
                                             Despacho Aduanero
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li role="menuitem">
-                                        <a href="/servicios" className="block px-4 py-2 text-sm text-text-primary hover:bg-gray-50 hover:text-primary-blue transition-colors">
-                                            Comercio Internacional
-                                        </a>
+                                        <Link href="/servicios?service=logistica" className="block px-4 py-2 text-sm text-text-primary hover:bg-gray-50 hover:text-primary-blue transition-colors">
+                                            Logística Integral
+                                        </Link>
+                                    </li>
+                                    <li role="menuitem">
+                                        <Link href="/servicios?service=terciarizacion" className="block px-4 py-2 text-sm text-text-primary hover:bg-gray-50 hover:text-primary-blue transition-colors">
+                                            Terciarización Comex
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <button
+                        <Link
+                            href="/clientes"
                             className="text-sm font-medium text-text-primary hover:text-primary-blue transition-colors duration-200"
                             role="menuitem"
                         >
                             Clientes
-                        </button>
+                        </Link>
 
-                        <button
+                        <Link
+                            href="/sobre-nosotros"
                             className="text-sm font-medium text-text-primary hover:text-primary-blue transition-colors duration-200"
                             role="menuitem"
                         >
-                            Información útil
-                        </button>
+                            Nosotros
+                        </Link>
                     </div>
                 </div>
             </header>
@@ -161,38 +169,46 @@ const Header = ({ className = '' }: HeaderProps) => {
 
                 {/* Menu Items */}
                 <div className="flex-1 flex flex-col items-center justify-center space-y-8 p-8 overflow-y-auto">
-                    <a
-                        href="#"
+                    <Link
+                        href="/"
                         onClick={toggleMenu}
                         className="text-2xl font-bold text-[#0F1D23] hover:text-[#2D8CBA] transition-colors"
                     >
                         Inicio
-                    </a>
+                    </Link>
 
                     <div className="w-full max-w-xs text-center space-y-4">
-                        <p className="text-2xl font-bold text-[#0F1D23] mb-4">Servicios</p>
-                        <div className="flex flex-col space-y-3 pl-4 border-l-2 border-[#2D8CBA]/20">
-                            <a href="/servicios" onClick={toggleMenu} className="text-lg text-gray-600 hover:text-[#2D8CBA]">Logística Integral</a>
-                            <a href="/servicios" onClick={toggleMenu} className="text-lg text-gray-600 hover:text-[#2D8CBA]">Despacho Aduanero</a>
-                            <a href="/servicios" onClick={toggleMenu} className="text-lg text-gray-600 hover:text-[#2D8CBA]">Comercio Internacional</a>
+                        <button
+                            onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
+                            className="flex items-center justify-center gap-2 w-full text-2xl font-bold text-[#0F1D23] mb-4 hover:text-[#2D8CBA] transition-colors"
+                        >
+                            Servicios
+                            <svg className={`w-5 h-5 transition-transform duration-300 ${isServicesMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div className={`flex flex-col space-y-3 pl-4 border-l-2 border-[#2D8CBA]/20 overflow-hidden transition-all duration-300 ${isServicesMenuOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
+                            <Link href="/servicios?service=despacho" onClick={toggleMenu} className="text-lg text-gray-600 hover:text-[#2D8CBA] py-1">Despacho Aduanero</Link>
+                            <Link href="/servicios?service=logistica" onClick={toggleMenu} className="text-lg text-gray-600 hover:text-[#2D8CBA] py-1">Logística Integral</Link>
+                            <Link href="/servicios?service=terciarizacion" onClick={toggleMenu} className="text-lg text-gray-600 hover:text-[#2D8CBA] py-1">Terciarización Comex</Link>
                         </div>
                     </div>
 
-                    <a
-                        href="#"
+                    <Link
+                        href="/clientes"
                         onClick={toggleMenu}
                         className="text-2xl font-bold text-[#0F1D23] hover:text-[#2D8CBA] transition-colors"
                     >
                         Clientes
-                    </a>
+                    </Link>
 
-                    <a
-                        href="#"
+                    <Link
+                        href="/sobre-nosotros"
                         onClick={toggleMenu}
                         className="text-2xl font-bold text-[#0F1D23] hover:text-[#2D8CBA] transition-colors"
                     >
-                        Información útil
-                    </a>
+                        Nosotros
+                    </Link>
                 </div>
 
                 {/* Footer / Watermark */}
