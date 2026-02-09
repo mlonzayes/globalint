@@ -21,7 +21,7 @@ const ClientsSection = () => {
     const tripleClients = [...clients, ...clients, ...clients, ...clients];
 
     return (
-        <section className="w-full py-16 sm:py-24 bg-white overflow-hidden">
+        <section className="w-full py-16 sm:py-24 bg-gray-50 overflow-hidden">
             <style jsx>{`
                 @keyframes scroll-left {
                     0% { transform: translateX(0); }
@@ -50,7 +50,7 @@ const ClientsSection = () => {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0F1D23]"
+                    className="text-3xl sm:text-4xl lg:text-5xl font-medium text-[#0F1D23]"
                 >
                     Nuestros clientes
                 </motion.h2>
@@ -59,19 +59,19 @@ const ClientsSection = () => {
             <div className="flex flex-col gap-8">
                 {/* Row 1: Left */}
                 <div className="relative w-full overflow-hidden pause-on-hover">
-                    <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-                    <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+                    <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+                    <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
 
                     <div className="flex animate-scroll-left gap-12 sm:gap-24 px-12">
                         {tripleClients.map((client, index) => (
                             <div
                                 key={`r1-${index}`}
-                                className="relative w-28 h-20 sm:w-40 sm:h-28 flex-shrink-0 transition-all duration-300 opacity-100 hover:scale-110 cursor-pointer filter grayscale-0"
+                                className="relative w-32 h-24 sm:w-48 sm:h-32 flex-shrink-0 transition-all duration-300 hover:scale-105 cursor-pointer bg-white rounded-2xl border border-gray-100 shadow-md flex items-center justify-center p-4 group hover:shadow-xl hover:border-[#33C9F4]/30"
                             >
                                 <img
                                     src={client.logo}
                                     alt={client.name}
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full object-contain filter drop-shadow-sm transition-all duration-300"
                                 />
                             </div>
                         ))}
@@ -80,19 +80,19 @@ const ClientsSection = () => {
 
                 {/* Row 2: Right */}
                 <div className="relative w-full overflow-hidden pause-on-hover">
-                    <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-                    <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+                    <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+                    <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
 
                     <div className="flex animate-scroll-right gap-12 sm:gap-24 px-12">
                         {tripleClients.map((client, index) => (
                             <div
                                 key={`r2-${index}`}
-                                className="relative w-28 h-20 sm:w-40 sm:h-28 flex-shrink-0 transition-all duration-300 opacity-100 hover:scale-110 cursor-pointer filter grayscale-0"
+                                className="relative w-32 h-24 sm:w-48 sm:h-32 flex-shrink-0 transition-all duration-300 hover:scale-105 cursor-pointer bg-white rounded-2xl border border-gray-100 shadow-md flex items-center justify-center p-4 group hover:shadow-xl hover:border-[#33C9F4]/30"
                             >
                                 <img
                                     src={client.logo}
                                     alt={client.name}
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full object-contain filter drop-shadow-sm transition-all duration-300"
                                 />
                             </div>
                         ))}

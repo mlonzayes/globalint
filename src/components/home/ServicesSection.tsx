@@ -64,7 +64,7 @@ const ServicesSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-6"
+                        className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-medium text-white mb-6"
                     >
                         Servicios
                     </motion.h2>
@@ -88,10 +88,10 @@ const ServicesSection = () => {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ y: -10 }}
-                            className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-[#2D8CBA]/50 transition-all duration-300 group cursor-default flex flex-col h-full"
+                            className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-cyan-500/10 hover:border-[#33C9F4]/50 transition-all duration-300 group cursor-default flex flex-col h-full"
                         >
-                            <div className="w-16 h-16 bg-[#2D8CBA]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#2D8CBA] transition-colors duration-300">
-                                <div className="text-[#33C9F4] group-hover:text-white transition-colors duration-300">
+                            <div className="w-16 h-16 bg-[#2D8CBA]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#33C9F4] transition-colors duration-300">
+                                <div className="text-white group-hover:text-white transition-colors duration-300">
                                     {service.icon}
                                 </div>
                             </div>

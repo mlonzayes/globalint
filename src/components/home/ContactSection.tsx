@@ -38,7 +38,7 @@ const ContactSection = () => {
                         <div className="space-y-8">
                             <div>
                                 <span className="text-sm font-bold tracking-widest text-[#2D8CBA] uppercase">Contacto</span>
-                                <h2 className="mt-2 text-2xl sm:text-4xl lg:text-5xl font-normal text-[#0F1D23] leading-tight">
+                                <h2 className="mt-2 text-2xl sm:text-4xl lg:text-5xl font-medium text-[#0F1D23] leading-tight">
                                     ¿Hablamos de tu próximo proyecto?
                                 </h2>
                                 <p className="mt-4 text-lg text-gray-600">

@@ -29,7 +29,7 @@ const AboutSection = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0F1D23] mb-6 leading-tight"
+                            className="text-3xl sm:text-4xl lg:text-5xl font-medium text-[#0F1D23] mb-6 leading-tight"
                         >
                             ¿Quiénes somos?
                         </motion.h2>

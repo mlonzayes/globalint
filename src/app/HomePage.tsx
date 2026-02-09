@@ -8,6 +8,7 @@ import AboutSection from '../components/home/AboutSection';
 import ServicesSection from '../components/home/ServicesSection';
 import IndustriesSection from '../components/home/IndustriesSection';
 import ClientsSection from '../components/home/ClientsSection';
+import UsefulInfoSection from '../components/home/UsefulInfoSection';
 import ContactSection from '../components/home/ContactSection';
 
 import CTASection from '../components/home/CTASection';
@@ -15,7 +16,7 @@ import WhatsAppButton from '../components/common/WhatsAppButton';
 
 export default function HomePage() {
     return (
-        <div className="flex flex-col min-h-screen bg-white">
+        <div className="flex flex-col min-h-screen bg-gray-50">
             <Header />
 
             <main className="flex-1 w-full relative">
@@ -25,6 +26,7 @@ export default function HomePage() {
                 <IndustriesSection />
                 <ServicesSection />
                 <ClientsSection />
+                <UsefulInfoSection />
                 <CTASection />
                 <ContactSection />
             </main>

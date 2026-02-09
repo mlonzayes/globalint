@@ -21,11 +21,11 @@ const clients = [
 
 const ClientsClient = () => {
     return (
-        <main className="min-h-screen bg-white flex flex-col font-sans text-[#0F1D23]">
+        <main className="min-h-screen bg-gray-50 flex flex-col font-sans text-[#0F1D23]">
             <Header />
 
             {/* Hero Section */}
-            <section className="relative w-full py-24 sm:py-32 lg:py-40 bg-white overflow-hidden">
+            <section className="relative w-full py-24 sm:py-32 lg:py-40 bg-gray-50 overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#33C9F4]/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
                     <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#33C9F4]/20 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />

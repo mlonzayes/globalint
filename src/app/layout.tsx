@@ -14,7 +14,7 @@ export const metadata = {
     default: 'Global International Trade',
     template: 'Global International Trade | %s',
   },
-  description: 'Global International Trade offers comprehensive logistics solutions with 15+ years experience, 10k+ successful shipments, and 99% success rate. Expert customs clearance and international commerce services.',
+  description: 'Global International Trade offers comprehensive logistics solutions with 30+ years experience, 10k+ successful shipments, and 99% success rate. Expert customs clearance and international commerce services.',
   keywords: 'international trade, logistics solutions, customs clearance, global commerce, freight forwarding, import export, supply chain management',
 
   openGraph: {
@@ -23,7 +23,7 @@ export const metadata = {
       default: 'Global International Trade',
       template: 'Global International Trade | %s',
     },
-    description: 'Partner with Global International Trade for reliable logistics solutions. 15+ years expertise, 50+ global partners, and proven 99% success rate in international commerce.',
+    description: 'Partner with Global International Trade for reliable logistics solutions.30+ years expertise, 50+ global partners, and proven 99% success rate in international commerce.',
   },
   icons: {
     icon: '/global.ico',

@@ -53,7 +53,7 @@ const HeroSection = () => {
                                 hidden: { opacity: 0, x: -30 },
                                 visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
                             }}
-                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-white mb-3 sm:mb-6 tracking-tight drop-shadow-lg"
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-white mb-3 sm:mb-6 tracking-tight drop-shadow-lg"
                         >
                             Comercio exterior con <br className="hidden sm:block" />
                             enfoque <span className="text-[#33C9F4]">estratégico.</span>

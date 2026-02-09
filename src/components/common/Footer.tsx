@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 interface FooterProps {
     className?: string;
@@ -25,6 +25,9 @@ const Footer = ({ className = '' }: FooterProps) => {
                             </a>
                             <a href="#" className="w-10 h-10 bg-[#0F1D23] border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#33C9F4] hover:text-[#0F1D23] hover:border-[#33C9F4] transition-all duration-300 text-gray-400">
                                 <FaLinkedinIn className="w-4 h-4" />
+                            </a>
+                            <a href="#" className="w-10 h-10 bg-[#0F1D23] border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#33C9F4] hover:text-[#0F1D23] hover:border-[#33C9F4] transition-all duration-300 text-gray-400">
+                                <FaInstagram className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
