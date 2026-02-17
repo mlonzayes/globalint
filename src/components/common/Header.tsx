@@ -131,6 +131,14 @@ const Header = ({ className = '', forceScrolled = false }: HeaderProps) => {
                         </Link>
 
                         <Link
+                            href="/informacion-util"
+                            className="text-sm font-medium text-text-primary hover:text-primary-blue transition-colors duration-200"
+                            role="menuitem"
+                        >
+                            Información Útil
+                        </Link>
+
+                        <Link
                             href="/sobre-nosotros"
                             className="text-sm font-medium text-text-primary hover:text-primary-blue transition-colors duration-200"
                             role="menuitem"
@@ -213,6 +221,14 @@ const Header = ({ className = '', forceScrolled = false }: HeaderProps) => {
                         className="text-2xl font-bold text-[#0F1D23] hover:text-[#2D8CBA] transition-colors"
                     >
                         Clientes
+                    </Link>
+
+                    <Link
+                        href="/informacion-util"
+                        onClick={toggleMenu}
+                        className="text-2xl font-bold text-[#0F1D23] hover:text-[#2D8CBA] transition-colors"
+                    >
+                        Información Útil
                     </Link>
 
                     <Link

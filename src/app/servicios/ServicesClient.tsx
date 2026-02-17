@@ -1,12 +1,13 @@
 'use client';
 
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import ContactSection from '@/components/home/ContactSection'; // Reusing ContactSection for CTA
+import PageLoader from '@/components/ui/PageLoader';
 
 // Data for services
 const services = [
@@ -318,8 +319,30 @@ const ServicesContent = () => {
         router.push(`?${newParams.toString()}`);
     };
 
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [videoLoaded, setVideoLoaded] = useState(false);
+    const [minTimeElapsed, setMinTimeElapsed] = useState(false);
+
+    useEffect(() => {
+        // Check if video is already loaded
+        if (videoRef.current && videoRef.current.readyState >= 3) {
+            setVideoLoaded(true);
+            setMinTimeElapsed(true);
+            return;
+        }
+
+        const timer = setTimeout(() => {
+            setMinTimeElapsed(true);
+        }, 2000); // Reduced to 2 seconds
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    const isLoading = !videoLoaded || !minTimeElapsed;
+
     return (
         <main className="min-h-screen bg-gray-50 flex flex-col text-[#0F1D23]">
+            <PageLoader isVisible={isLoading} />
             <Header forceScrolled={true} />
 
             {/* Detailed Landing Hero */}
@@ -327,10 +350,12 @@ const ServicesContent = () => {
                 {/* Background Video */}
                 <div className="absolute inset-0 z-0">
                     <video
+                        ref={videoRef}
                         autoPlay
                         muted
                         loop
                         playsInline
+                        onLoadedData={() => setVideoLoaded(true)}
                         className="w-full h-full object-cover"
                     >
                         <source src="https://www.pexels.com/es-es/download/video/32750416/" type="video/mp4" />

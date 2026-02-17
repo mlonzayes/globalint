@@ -66,7 +66,7 @@ const ClientsSection = () => {
                         {tripleClients.map((client, index) => (
                             <div
                                 key={`r1-${index}`}
-                                className="relative w-32 h-24 sm:w-48 sm:h-32 flex-shrink-0 transition-all duration-300 hover:scale-105 cursor-pointer bg-white rounded-2xl border border-gray-100 shadow-md flex items-center justify-center p-4 group hover:shadow-xl hover:border-[#33C9F4]/30"
+                                className="relative w-32 h-24 sm:w-48 sm:h-32 flex-shrink-0 transition-all duration-300 hover:scale-105 cursor-pointer flex items-center justify-center p-4 group"
                             >
                                 <img
                                     src={client.logo}
@@ -87,7 +87,7 @@ const ClientsSection = () => {
                         {tripleClients.map((client, index) => (
                             <div
                                 key={`r2-${index}`}
-                                className="relative w-32 h-24 sm:w-48 sm:h-32 flex-shrink-0 transition-all duration-300 hover:scale-105 cursor-pointer bg-white rounded-2xl border border-gray-100 shadow-md flex items-center justify-center p-4 group hover:shadow-xl hover:border-[#33C9F4]/30"
+                                className="relative w-32 h-24 sm:w-48 sm:h-32 flex-shrink-0 transition-all duration-300 hover:scale-105 cursor-pointer flex items-center justify-center p-4 group"
                             >
                                 <img
                                     src={client.logo}

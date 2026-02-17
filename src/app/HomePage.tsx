@@ -8,7 +8,6 @@ import AboutSection from '../components/home/AboutSection';
 import ServicesSection from '../components/home/ServicesSection';
 import IndustriesSection from '../components/home/IndustriesSection';
 import ClientsSection from '../components/home/ClientsSection';
-import UsefulInfoSection from '../components/home/UsefulInfoSection';
 import ContactSection from '../components/home/ContactSection';
 
 import CTASection from '../components/home/CTASection';
@@ -26,7 +25,6 @@ export default function HomePage() {
                 <IndustriesSection />
                 <ServicesSection />
                 <ClientsSection />
-                <UsefulInfoSection />
                 <CTASection />
                 <ContactSection />
             </main>

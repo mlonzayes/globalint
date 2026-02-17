@@ -66,10 +66,10 @@ const AboutSection = () => {
                         transition={{ delay: 0.4 }}
                         className="relative"
                     >
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl group max-w-md mx-auto">
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl group w-full max-w-xs sm:max-w-sm lg:max-w-[320px] mx-auto">
                             <div className="absolute inset-0 bg-[#0F1D23]/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
                             <img
-                                src="/about-us.png"
+                                src="/about/about.jpg"
                                 alt="Oficina de Global International Trade"
                                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                             />
@@ -90,7 +90,7 @@ const AboutSection = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-bold text-[#0F1D23]">15+</p>
+                                    <p className="text-3xl font-bold text-[#0F1D23]">30+</p>
                                     <p className="text-sm text-gray-500 font-medium">Años de Experticia</p>
                                 </div>
                             </div>
