@@ -80,8 +80,8 @@ const LogisticsRoadmap = () => {
     ];
 
     return (
-        <div className="py-16 w-full max-w-5xl mx-auto">
-            <h3 className="text-3xl font-bold text-center text-[#0F1D23] mb-12">Nuestro Proceso de Valor</h3>
+        <div className="py-10 sm:py-16 w-full max-w-5xl mx-auto px-1">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center text-[#0F1D23] mb-8 sm:mb-12">Nuestro Proceso de Valor</h3>
             <div className="space-y-12 sm:space-y-24 relative">
                 {/* Connecting Line (Desktop) */}
                 <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#33C9F4]/20 via-[#33C9F4] to-[#33C9F4]/20 -translate-x-1/2" />
@@ -152,12 +152,12 @@ const OutsourcingScope = () => {
     ];
 
     return (
-        <div className="py-16 w-full max-w-5xl mx-auto">
-            <h3 className="text-3xl font-bold text-center text-[#0F1D23] mb-4">Gestión Aduanera</h3>
-            <p className="text-center text-gray-500 max-w-2xl mx-auto mb-16">
+        <div className="py-10 sm:py-16 w-full max-w-5xl mx-auto px-1">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center text-[#0F1D23] mb-4">Gestión Aduanera</h3>
+            <p className="text-center text-gray-500 max-w-2xl mx-auto mb-10 sm:mb-16">
                 Abarcamos todas las instancias operativas para garantizar el éxito de tus operaciones.
             </p>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                 {scopes.map((scope, index) => (
                     <motion.div
                         key={index}
@@ -165,7 +165,7 @@ const OutsourcingScope = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.15 }}
-                        className="group relative h-[420px] rounded-3xl overflow-hidden shadow-xl"
+                        className="group relative h-[300px] sm:h-[380px] md:h-[420px] rounded-3xl overflow-hidden shadow-xl"
                     >
                         <img
                             src={scope.image}
@@ -200,7 +200,7 @@ const CustomsOperations = () => {
         {
             title: "Exportación",
             desc: "Gestionamos el despacho de exportación, la coordinación de embarques, el manejo de contenedores y la negociación de fletes marítimos y aéreos. Nos encargamos de la documentación de embarque, certificados de origen, beneficios a la exportación y cobros mediante cartas de crédito, asegurando operaciones eficientes y sin errores.",
-            image: "/logistics_cargo_ship_photo_1769982467110.png"
+            image: "/logistics_process_check.png"
         },
         {
             title: "Tramitación ante Terceros",
@@ -341,12 +341,12 @@ const ServicesContent = () => {
     const isLoading = !videoLoaded || !minTimeElapsed;
 
     return (
-        <main className="min-h-screen bg-gray-50 flex flex-col text-[#0F1D23]">
+        <main className="min-h-screen bg-gray-50 flex flex-col text-[#0F1D23] overflow-x-hidden w-full">
             <PageLoader isVisible={isLoading} />
             <Header forceScrolled={true} />
 
             {/* Detailed Landing Hero */}
-            <section className="relative w-full py-24 sm:py-32 lg:py-40 overflow-hidden">
+            <section className="relative w-full py-28 sm:py-36 lg:py-44 overflow-hidden" style={{ maxWidth: '100vw' }}>
                 {/* Background Video */}
                 <div className="absolute inset-0 z-0">
                     <video
@@ -364,7 +364,7 @@ const ServicesContent = () => {
                     <div className="absolute inset-0 bg-black/50" />
                 </div>
 
-                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         <motion.div
                             key={selectedService.id} // Re-animate on change
@@ -373,10 +373,10 @@ const ServicesContent = () => {
                             transition={{ duration: 0.6 }}
                         >
                             <span className="text-[#33C9F4] font-bold tracking-widest uppercase text-sm mb-4 block">Nuestros Servicios</span>
-                            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-normal text-white mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-normal text-white mb-6 leading-tight break-words">
                                 {selectedService.title}
                             </h1>
-                            <p className="text-xl text-gray-100 leading-relaxed mb-8 max-w-lg mx-auto">
+                            <p className="text-base sm:text-xl text-gray-100 leading-relaxed mb-8 max-w-lg mx-auto px-2 sm:px-0">
                                 {selectedService.shortDescription}
                             </p>
                             <div className="flex justify-center">
@@ -395,11 +395,11 @@ const ServicesContent = () => {
 
 
             {/* Details Section */}
-            <section className="py-24 bg-gray-50 relative">
-                <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="prose prose-lg max-w-none mb-20 text-center">
-                        <h3 className="text-3xl font-bold text-[#0F1D23] mb-8">¿En qué consiste?</h3>
-                        <p className="text-xl text-gray-600 leading-relaxed">
+            <section className="py-20 sm:py-28 bg-gray-50 relative">
+                <div className="max-w-[1100px] mx-auto px-6 sm:px-8 lg:px-12">
+                    <div className="prose prose-lg max-w-none mb-10 sm:mb-16 text-center">
+                        <h3 className="text-2xl sm:text-3xl font-bold text-[#0F1D23] mb-6">¿En qué consiste?</h3>
+                        <p className="text-base sm:text-xl text-gray-600 leading-relaxed">
                             {selectedService.fullDescription}
                         </p>
                     </div>
@@ -407,25 +407,25 @@ const ServicesContent = () => {
                     {/* Logistics Roadmap - Conditional Render */}
                     {/* Detailed Service Modules */}
                     {selectedService.id === 'despacho' && (
-                        <div className="mb-24">
+                        <div className="mb-14 sm:mb-24">
                             <CustomsOperations />
                         </div>
                     )}
 
                     {selectedService.id === 'logistica' && (
-                        <div className="mb-24">
+                        <div className="mb-14 sm:mb-24">
                             <LogisticsRoadmap />
                         </div>
                     )}
 
                     {/* Outsourcing Scope - Conditional Render */}
                     {selectedService.id === 'terciarizacion' && (
-                        <div className="mb-24">
+                        <div className="mb-14 sm:mb-24">
                             <OutsourcingScope />
                         </div>
                     )}
 
-                    <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 mb-20 overflow-x-auto md:overflow-visible pb-8 md:pb-0 snap-x snap-mandatory md:snap-none -mx-4 px-4 md:mx-0 md:px-0 hide-scrollbar">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-8 mb-10 sm:mb-16">
                         {selectedService.benefits?.map((benefit, idx) => (
                             <motion.div
                                 key={idx}
@@ -433,7 +433,7 @@ const ServicesContent = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-8 rounded-2xl text-center hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-center"
+                                className="bg-white p-8 sm:p-8 rounded-2xl text-center hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-center"
                             >
                                 <h4 className="text-[#33C9F4] text-xl font-bold mb-3">{benefit.title}</h4>
                                 <p className="text-gray-600 font-medium">{benefit.desc}</p>
@@ -444,7 +444,7 @@ const ServicesContent = () => {
                     <div className="bg-[#0F1D23] rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#33C9F4]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
                         <h3 className="text-2xl font-bold mb-8 relative z-10 text-center sm:text-left">Características Clave</h3>
-                        <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-6 relative z-10">
+                        <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-5 sm:gap-y-6 relative z-10">
                             {selectedService.features.map((feature, i) => (
                                 <li key={i} className="flex items-center gap-4 text-lg text-gray-300">
                                     <div className="w-8 h-8 rounded-full bg-[#33C9F4]/20 flex items-center justify-center text-[#33C9F4] flex-shrink-0">

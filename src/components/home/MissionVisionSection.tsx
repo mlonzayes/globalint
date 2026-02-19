@@ -13,7 +13,7 @@ const MissionVisionValues = () => {
         {
             title: "Visión",
             description: "Somos el socio de confianza para compañías que quieren crecer globalmente.",
-            image: "/about/vision.JPG"
+            image: "/about/vision.jpg"
         },
         {
             title: "Valores",
