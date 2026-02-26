@@ -195,7 +195,7 @@ const CustomsOperations = () => {
         {
             title: "Importación",
             desc: "Nos ocupamos de la confección y tramitación del despacho de importación, admisiones temporales, depósitos fiscales y zonas francas. Coordinamos el retiro de mercadería en puertos y aeropuertos, el transporte hasta destino final y la gestión de operaciones especiales, muestras y retornos. Controlamos el estado de la mercadería y gestionamos reclamos ante seguros cuando es necesario. Nos ocupamos de la de la liberación de todo tipo de operaciones de importación, Importaciones a consumo, admisiones temporales, proyectos especiales, llave en mano, etc. El servicio es customizado para cada cliente según sus necesidades que van desde el retiro de la mercadería en origen, hasta la entrega en el domicilio que se requiera",
-            image: "/services/importacion.jpg"
+            image: "/services/importacion.png"
         },
         {
             title: "Exportación",
