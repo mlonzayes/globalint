@@ -73,11 +73,10 @@ const AboutSection = () => {
                         className="relative"
                     >
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl group w-full max-w-xs sm:max-w-sm lg:max-w-[320px] mx-auto">
-                            <div className="absolute inset-0 bg-[#0F1D23]/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
                             <img
                                 src="/about/quienes_somos.jpeg"
                                 alt="Oficina de Global International Trade"
-                                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 brightness-110 contrast-125"
                             />
                         </div>
 

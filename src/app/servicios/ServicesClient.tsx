@@ -18,7 +18,7 @@ const services = [
         fullDescription: 'Gestión aduanera integral para todas tus operaciones.',
         features: ['Importación y Exportación', 'Gestión de Documentación', 'Trámites ante Organismos', 'Asesoramiento Técnico'],
         icon: '📋',
-        image: '/services/importacion.jpg',
+        image: '/services/importacion.png',
         benefits: [
             { title: "Rapidez", desc: "Liberación de cargas en tiempo récord." },
             { title: "Seguridad", desc: "Cumplimiento total de regulaciones." },
