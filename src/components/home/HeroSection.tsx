@@ -53,7 +53,7 @@ const HeroSection = () => {
                             onLoadedData={() => setVideoLoaded(true)}
                             className="w-full h-full object-cover"
                         >
-                            <source src="https://www.pexels.com/es-es/download/video/30899272/" type="video/mp4" />
+                            <source src="/videos/video_30899272.webm" type="video/webm" />
                             Your browser does not support the video tag.
                         </video>
                         {/* Gradient Overlay for Text Readability */}

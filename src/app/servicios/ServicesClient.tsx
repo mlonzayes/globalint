@@ -358,7 +358,7 @@ const ServicesContent = () => {
                         onLoadedData={() => setVideoLoaded(true)}
                         className="w-full h-full object-cover"
                     >
-                        <source src="https://www.pexels.com/es-es/download/video/6595364/" type="video/mp4" />
+                        <source src="/videos/video_6595364.webm" type="video/webm" />
                     </video>
                     {/* Dark Overlay for contrast */}
                     <div className="absolute inset-0 bg-black/50" />

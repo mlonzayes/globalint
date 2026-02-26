@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaGlobeAmericas, FaBriefcase, FaFileContract } from 'react-icons/fa';
 
 interface Service {
@@ -34,13 +34,6 @@ const services: Service[] = [
 
 const ServicesSection = () => {
     const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start end", "end start"]
-    });
-
-    const y1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
-    const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
         <section id="servicios" ref={containerRef} className="w-full py-16 sm:py-24 bg-[#0F1D23] relative overflow-hidden">
@@ -52,16 +45,16 @@ const ServicesSection = () => {
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+                    className="w-full h-full object-cover opacity-30"
                 >
-                    <source src="https://www.pexels.com/es-es/download/video/6595364/" type="video/mp4" />
+                    <source src="/videos/video_6595364.webm" type="video/webm" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-b from-[#0F1D23]/90 via-[#0F1D23]/70 to-[#0F1D23]/90" />
             </div>
 
-            {/* Parallax Background Elements */}
-            <motion.div style={{ y: y1 }} className="absolute top-0 left-0 w-96 h-96 bg-[#2D8CBA]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-            <motion.div style={{ y: y2 }} className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#33C9F4]/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
+            {/* Background Elements */}
+            <div className="absolute top-0 left-0 w-96 h-96 bg-[#2D8CBA]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#33C9F4]/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
 
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">

@@ -71,7 +71,7 @@ const ClientsClient = () => {
                         onLoadedData={() => setVideoLoaded(true)}
                         className="w-full h-full object-cover"
                     >
-                        <source src="https://www.pexels.com/es-es/download/video/32750416/" type="video/mp4" />
+                        <source src="/videos/video_6595364.webm" type="video/webm" />
                     </video>
                     <div className="absolute inset-0 bg-black/50" />
                 </div>
