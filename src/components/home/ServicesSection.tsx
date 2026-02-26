@@ -43,7 +43,21 @@ const ServicesSection = () => {
     const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
-        <section ref={containerRef} className="w-full py-16 sm:py-24 bg-[#0F1D23] relative overflow-hidden">
+        <section id="servicios" ref={containerRef} className="w-full py-16 sm:py-24 bg-[#0F1D23] relative overflow-hidden">
+
+            {/* Background Video */}
+            <div className="absolute inset-0 z-0">
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+                >
+                    <source src="https://www.pexels.com/es-es/download/video/6595364/" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0F1D23]/90 via-[#0F1D23]/70 to-[#0F1D23]/90" />
+            </div>
 
             {/* Parallax Background Elements */}
             <motion.div style={{ y: y1 }} className="absolute top-0 left-0 w-96 h-96 bg-[#2D8CBA]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
@@ -115,6 +129,12 @@ const ServicesSection = () => {
                             </div>
                         </motion.div>
                     ))}
+                </div>
+
+                <div className="mt-16 text-center">
+                    <a href="/servicios" className="inline-block bg-[#33C9F4] hover:bg-[#2bb4db] text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300">
+                        Ver más detalles de servicios
+                    </a>
                 </div>
             </div>
         </section>

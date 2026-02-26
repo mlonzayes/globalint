@@ -83,7 +83,7 @@ const Header = ({ className = '', forceScrolled = false }: HeaderProps) => {
 
                         <div className="relative group">
                             <Link
-                                href="/servicios"
+                                href="/#servicios"
                                 className="flex items-center gap-1 text-sm font-medium text-text-primary hover:text-primary-blue transition-colors duration-200"
                                 role="menuitem"
                                 aria-haspopup="true"
@@ -123,7 +123,7 @@ const Header = ({ className = '', forceScrolled = false }: HeaderProps) => {
                         </div>
 
                         <Link
-                            href="/clientes"
+                            href="/#clientes"
                             className="text-sm font-medium text-text-primary hover:text-primary-blue transition-colors duration-200"
                             role="menuitem"
                         >
@@ -139,7 +139,7 @@ const Header = ({ className = '', forceScrolled = false }: HeaderProps) => {
                         </Link>
 
                         <Link
-                            href="/sobre-nosotros"
+                            href="/#nosotros"
                             className="text-sm font-medium text-text-primary hover:text-primary-blue transition-colors duration-200"
                             role="menuitem"
                         >
@@ -216,7 +216,7 @@ const Header = ({ className = '', forceScrolled = false }: HeaderProps) => {
                     </div>
 
                     <Link
-                        href="/clientes"
+                        href="/#clientes"
                         onClick={toggleMenu}
                         className="text-2xl font-bold text-[#0F1D23] hover:text-[#2D8CBA] transition-colors"
                     >
@@ -232,7 +232,7 @@ const Header = ({ className = '', forceScrolled = false }: HeaderProps) => {
                     </Link>
 
                     <Link
-                        href="/sobre-nosotros"
+                        href="/#nosotros"
                         onClick={toggleMenu}
                         className="text-2xl font-bold text-[#0F1D23] hover:text-[#2D8CBA] transition-colors"
                     >

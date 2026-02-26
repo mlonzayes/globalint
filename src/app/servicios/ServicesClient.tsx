@@ -18,7 +18,7 @@ const services = [
         fullDescription: 'Gestión aduanera integral para todas tus operaciones.',
         features: ['Importación y Exportación', 'Gestión de Documentación', 'Trámites ante Organismos', 'Asesoramiento Técnico'],
         icon: '📋',
-        image: '/warehouse_workers_photo_1769982485977.png',
+        image: '/services/importacion.jpg',
         benefits: [
             { title: "Rapidez", desc: "Liberación de cargas en tiempo récord." },
             { title: "Seguridad", desc: "Cumplimiento total de regulaciones." },
@@ -194,18 +194,18 @@ const CustomsOperations = () => {
     const tabs = [
         {
             title: "Importación",
-            desc: "Nos ocupamos de la confección y tramitación del despacho de importación, admisiones temporales, depósitos fiscales y zonas francas. Coordinamos el retiro de mercadería en puertos y aeropuertos, el transporte hasta destino final y la gestión de operaciones especiales, muestras y retornos. Controlamos el estado de la mercadería y gestionamos reclamos ante seguros cuando es necesario.",
-            image: "/import_operations_port.png"
+            desc: "Nos ocupamos de la confección y tramitación del despacho de importación, admisiones temporales, depósitos fiscales y zonas francas. Coordinamos el retiro de mercadería en puertos y aeropuertos, el transporte hasta destino final y la gestión de operaciones especiales, muestras y retornos. Controlamos el estado de la mercadería y gestionamos reclamos ante seguros cuando es necesario. Nos ocupamos de la de la liberación de todo tipo de operaciones de importación, Importaciones a consumo, admisiones temporales, proyectos especiales, llave en mano, etc. El servicio es customizado para cada cliente según sus necesidades que van desde el retiro de la mercadería en origen, hasta la entrega en el domicilio que se requiera",
+            image: "/services/importacion.jpg"
         },
         {
             title: "Exportación",
             desc: "Gestionamos el despacho de exportación, la coordinación de embarques, el manejo de contenedores y la negociación de fletes marítimos y aéreos. Nos encargamos de la documentación de embarque, certificados de origen, beneficios a la exportación y cobros mediante cartas de crédito, asegurando operaciones eficientes y sin errores.",
-            image: "/logistics_process_check.png"
+            image: "/services/exportacion.jpg"
         },
         {
             title: "Tramitación ante Terceros",
-            desc: "Realizamos gestiones ante todos los organismos competentes (ANMAT, SENASA, cámaras, secretarías y otros), garantizando el cumplimiento normativo y la agilidad en cada operación.",
-            image: "/customs_declaration.png"
+            desc: "Realizamos gestiones ante todos los organismos competentes (SENASA, ANMAT, INAL, Secretaria de Industria y Comercio,  cámaras, otros), garantizando el cumplimiento normativo y la agilidad en cada operación.",
+            image: "/services/tramitacion_terceros.jpg"
         }
     ];
 
@@ -358,7 +358,7 @@ const ServicesContent = () => {
                         onLoadedData={() => setVideoLoaded(true)}
                         className="w-full h-full object-cover"
                     >
-                        <source src="https://www.pexels.com/es-es/download/video/32750416/" type="video/mp4" />
+                        <source src="https://www.pexels.com/es-es/download/video/6595364/" type="video/mp4" />
                     </video>
                     {/* Dark Overlay for contrast */}
                     <div className="absolute inset-0 bg-black/50" />

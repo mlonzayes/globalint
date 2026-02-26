@@ -30,36 +30,27 @@ const ClientsClient = () => {
 
     // List of images from public/clients/clients_page
     const clientImages = [
-        "03_cosmacasrllogo_29777.jpg",
-        "1658578442-e84ada33d0fbe8fd2ad8e6e0140a4b1b7833c7762c8956d9c553c8a7fc02ddd5-d.webp",
-        "1721139197457.jpg",
-        "4fe4c4_0d7af00753004654871adaab95bf396b~mv2.png",
-        "AVEX-SA.png",
-        "Diseño sin título (2).png",
-        "MSC-CRUCEROS_1516035502.jpg",
-        "acacoop_logo.jpg",
-        "images (1).png",
-        "images (10).png",
-        "images (2).png",
-        "images (3).jpg",
-        "images (3).png",
-        "images (4).jpg",
-        "images (4).png",
-        "images (5).jpg",
-        "images (5).png",
-        "images (6).png",
-        "images (7).png",
-        "images (8).png",
-        "images (9).png",
-        "imposudamericana_logo.jpg",
-        "logo-header.png",
-        "mooving_s_r_l_logo.jpg",
+        "american_vial.png",
+        "american_agro.jpg",
+        "aca.jpg",
+        "tres_arroyos.png",
+        "mota.jpg",
+        "aca.jpg",
+        "lepain.png",
+        "Neored.png",
+        "apm_terminals.png",
+        "MSC-CRUCEROS.jpg",
+        "xcmg_group_latam_logo.jpg",
         "nanoteksa_logo.jpg",
         "neumen_cuadrado-jpg.webp",
-        "screen-0.jpg",
-        "unnamed.jpg",
-        "unnamed.png",
-        "xcmg_group_latam_logo.jpg"
+        "agrofun.jpg",
+        "multivag.png",
+        "fachman.png",
+        "dosicolor.png",
+        "enjoy.png",
+        "potreto_de_funes.png",
+        "jonh_car.png",
+        "cosmaca.jpg"
     ];
 
     return (
@@ -93,7 +84,7 @@ const ClientsClient = () => {
                             transition={{ duration: 0.6 }}
                             className="text-4xl sm:text-5xl lg:text-7xl font-normal text-white mb-6 leading-tight"
                         >
-                            Nuestros Clientes
+                            Algunos de nuestros clientes
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
     return (
-        <section className="w-full py-16 sm:py-24 bg-gray-50 overflow-hidden">
+        <section id="nosotros" className="w-full py-16 sm:py-24 bg-gray-50 overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative">
 
                 {/* Decorative Elements */}
@@ -55,6 +55,12 @@ const AboutSection = () => {
                             <p>
                                 Acompañamos a empresas en todas las etapas, desde el primer paso hasta operaciones complejas en mercados internacionales, asegurando que cada movimiento sea estratégico y rentable.
                             </p>
+
+                            <div className="pt-4">
+                                <a href="/sobre-nosotros" className="inline-block bg-[#33C9F4] hover:bg-[#2D8CBA] text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300">
+                                    Más detalles
+                                </a>
+                            </div>
                         </motion.div>
                     </div>
 
@@ -69,7 +75,7 @@ const AboutSection = () => {
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl group w-full max-w-xs sm:max-w-sm lg:max-w-[320px] mx-auto">
                             <div className="absolute inset-0 bg-[#0F1D23]/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
                             <img
-                                src="/about/about.jpg"
+                                src="/about/quienes_somos.jpeg"
                                 alt="Oficina de Global International Trade"
                                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                             />

@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 interface FooterProps {
     className?: string;
@@ -15,19 +16,24 @@ const Footer = ({ className = '' }: FooterProps) => {
 
                     {/* Column 1: Brand & Socials */}
                     <div className="flex flex-col items-start gap-6">
-                        {/* Logo Removed */}
+                        <Link href="/" className="bg-white p-2 md:p-3 rounded-xl inline-block">
+                            <Image
+                                src="/logo.png"
+                                alt="Global International Trade Logo"
+                                width={300}
+                                height={118}
+                                className="w-48 h-auto"
+                            />
+                        </Link>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                             Tu socio estratégico en comercio exterior. Soluciones integrales para potenciar tu negocio global.
                         </p>
                         <div className="flex gap-3 mt-2">
                             <a href="#" className="w-10 h-10 bg-[#0F1D23] border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#33C9F4] hover:text-[#0F1D23] hover:border-[#33C9F4] transition-all duration-300 text-gray-400">
-                                <FaFacebookF className="w-4 h-4" />
+                                <FaInstagram className="w-4 h-4" />
                             </a>
                             <a href="#" className="w-10 h-10 bg-[#0F1D23] border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#33C9F4] hover:text-[#0F1D23] hover:border-[#33C9F4] transition-all duration-300 text-gray-400">
                                 <FaLinkedinIn className="w-4 h-4" />
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-[#0F1D23] border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#33C9F4] hover:text-[#0F1D23] hover:border-[#33C9F4] transition-all duration-300 text-gray-400">
-                                <FaInstagram className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
@@ -42,15 +48,38 @@ const Footer = ({ className = '' }: FooterProps) => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Services */}
+                    {/* Column 3: Enlaces Oficiales */}
                     <div>
-                        <h3 className="text-white font-bold text-lg mb-6">Servicios</h3>
-                        <ul className="space-y-4">
-                            <li><a href="/servicios" className="text-gray-400 hover:text-[#33C9F4] transition-colors">Logística Integral</a></li>
-                            <li><a href="/servicios" className="text-gray-400 hover:text-[#33C9F4] transition-colors">Despacho Aduanero</a></li>
-                            <li><a href="/servicios" className="text-gray-400 hover:text-[#33C9F4] transition-colors">Comercio Internacional</a></li>
-                            <li><a href="/servicios" className="text-gray-400 hover:text-[#33C9F4] transition-colors">Terciarización Comex</a></li>
-                        </ul>
+                        <h3 className="text-white font-bold text-lg mb-6">Enlaces útiles</h3>
+                        <div className="flex flex-col gap-4">
+                            <a href="https://www.argentina.gob.ar/senasa" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl overflow-hidden flex items-center justify-center w-[160px] h-[60px] hover:scale-105 transition-transform shadow-sm">
+                                <Image
+                                    src="/services/senasa.jpeg"
+                                    alt="Senasa"
+                                    width={160}
+                                    height={60}
+                                    className="w-full h-full object-cover"
+                                />
+                            </a>
+                            <a href="https://www.argentina.gob.ar/" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl overflow-hidden flex items-center justify-center w-[160px] h-[60px] hover:scale-105 transition-transform shadow-sm">
+                                <Image
+                                    src="/services/boletin oficial.png"
+                                    alt="República Argentina"
+                                    width={160}
+                                    height={60}
+                                    className="w-full h-full object-contain p-1"
+                                />
+                            </a>
+                            <a href="https://www.argentina.gob.ar/arca" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl overflow-hidden flex items-center justify-center w-[160px] h-[60px] hover:scale-105 transition-transform shadow-sm">
+                                <Image
+                                    src="/services/arca.webp"
+                                    alt="ARCA"
+                                    width={160}
+                                    height={60}
+                                    className="w-full h-full object-cover"
+                                />
+                            </a>
+                        </div>
                     </div>
 
                     {/* Column 4: Contact */}

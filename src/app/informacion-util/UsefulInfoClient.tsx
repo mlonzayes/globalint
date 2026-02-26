@@ -43,22 +43,8 @@ const UsefulInfoClient = () => {
             title: "Buscador de NCM",
             desc: "Nomenclatura Común del Mercosur.",
             icon: <LuBox className="w-8 h-8 text-[#33C9F4]" />,
-            link: "http://www.afip.gob.ar/ncm/",
-            linkText: "Consultar AFIP"
-        },
-        {
-            title: "Incoterms 2020",
-            desc: "Reglas internacionales para términos comerciales.",
-            icon: <LuShip className="w-8 h-8 text-[#33C9F4]" />,
-            link: "https://iccwbo.org/business-solutions/incoterms-rules/",
-            linkText: "Ver Incoterms"
-        },
-        {
-            title: "Central de Información",
-            desc: "Ventanilla Única de Comercio Exterior.",
-            icon: <LuGlobe className="w-8 h-8 text-[#33C9F4]" />,
-            link: "https://www.argentina.gob.ar/vuce",
-            linkText: "Ir a VUCE"
+            link: "http://web.comex.com.ar/cached/browsencm.php",
+            linkText: "Consultar NCM"
         }
     ];
 
@@ -106,8 +92,8 @@ const UsefulInfoClient = () => {
 
             {/* Resources Grid */}
             <section className="py-24 bg-white relative">
-                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {resources.map((resource, index) => (
                             <motion.a
                                 href={resource.link}

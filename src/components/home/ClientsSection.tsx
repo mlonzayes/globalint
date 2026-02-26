@@ -21,7 +21,7 @@ const ClientsSection = () => {
     const tripleClients = [...clients, ...clients, ...clients, ...clients];
 
     return (
-        <section className="w-full py-16 sm:py-24 bg-gray-50 overflow-hidden">
+        <section id="clientes" className="w-full py-16 sm:py-24 bg-gray-50 overflow-hidden">
             <style jsx>{`
                 @keyframes scroll-left {
                     0% { transform: translateX(0); }
@@ -98,6 +98,12 @@ const ClientsSection = () => {
                         ))}
                     </div>
                 </div>
+            </div>
+
+            <div className="mt-16 text-center relative z-20">
+                <a href="/clientes" className="inline-block bg-[#33C9F4] hover:bg-[#2D8CBA] text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300">
+                    Ver todos nuestros clientes
+                </a>
             </div>
         </section>
     );

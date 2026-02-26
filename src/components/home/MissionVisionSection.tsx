@@ -8,17 +8,17 @@ const MissionVisionValues = () => {
         {
             title: "Misión",
             description: "Facilitar operaciones de comercio exterior integrales y estratégicas, permitiendo que empresas exporten e importen con seguridad, eficiencia y menores costos.",
-            image: "/about/mision.jpg"
+            image: "/about/mision_1.jpg"
         },
         {
             title: "Visión",
             description: "Somos el socio de confianza para compañías que quieren crecer globalmente.",
-            image: "/about/vision.jpg"
+            image: "/about/vision_1.jpg"
         },
         {
             title: "Valores",
             description: "Compromiso con la excelencia, transparencia en cada operación y enfoque en resultados que generen valor real para nuestros clientes.",
-            image: "/about/valores.jpg"
+            image: "/about/valores_1.jpg"
         }
     ];
 
