@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 interface FooterProps {
     className?: string;
@@ -12,28 +12,20 @@ const Footer = ({ className = '' }: FooterProps) => {
     return (
         <footer className={`w-full bg-footer-background text-[#33C9F4] ${className}`}>
             <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 text-left">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8 text-left">
 
                     {/* Column 1: Brand & Socials */}
                     <div className="flex flex-col items-start gap-6">
-                        <Link href="/" className="bg-white p-2 md:p-3 rounded-xl inline-block">
-                            <Image
-                                src="/logo.png"
-                                alt="Global International Trade Logo"
-                                width={300}
-                                height={118}
-                                className="w-48 h-auto"
-                            />
-                        </Link>
+                        <p className="text-white font-bold text-lg">Global International Trade</p>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                             Tu socio estratégico en comercio exterior. Soluciones integrales para potenciar tu negocio global.
                         </p>
                         <div className="flex gap-3 mt-2">
-                            <a href="#" className="w-10 h-10 bg-[#0F1D23] border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#33C9F4] hover:text-[#0F1D23] hover:border-[#33C9F4] transition-all duration-300 text-gray-400">
+                            <a href="https://www.instagram.com/global.internationaltrade" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#0F1D23] border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#33C9F4] hover:text-[#0F1D23] hover:border-[#33C9F4] transition-all duration-300 text-gray-400">
                                 <FaInstagram className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-10 h-10 bg-[#0F1D23] border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#33C9F4] hover:text-[#0F1D23] hover:border-[#33C9F4] transition-all duration-300 text-gray-400">
-                                <FaLinkedinIn className="w-4 h-4" />
+                            <a href="https://wa.me/5491154522801" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#0F1D23] border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#33C9F4] hover:text-[#0F1D23] hover:border-[#33C9F4] transition-all duration-300 text-gray-400">
+                                <FaWhatsapp className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
@@ -48,41 +40,7 @@ const Footer = ({ className = '' }: FooterProps) => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Enlaces Oficiales */}
-                    <div>
-                        <h3 className="text-white font-bold text-lg mb-6">Enlaces útiles</h3>
-                        <div className="flex flex-col gap-4">
-                            <a href="https://www.argentina.gob.ar/senasa" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl overflow-hidden flex items-center justify-center w-[160px] h-[60px] hover:scale-105 transition-transform shadow-sm">
-                                <Image
-                                    src="/services/senasa.jpeg"
-                                    alt="Senasa"
-                                    width={160}
-                                    height={60}
-                                    className="w-full h-full object-cover"
-                                />
-                            </a>
-                            <a href="https://www.argentina.gob.ar/" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl overflow-hidden flex items-center justify-center w-[160px] h-[60px] hover:scale-105 transition-transform shadow-sm">
-                                <Image
-                                    src="/services/boletin oficial.png"
-                                    alt="República Argentina"
-                                    width={160}
-                                    height={60}
-                                    className="w-full h-full object-contain p-1"
-                                />
-                            </a>
-                            <a href="https://www.argentina.gob.ar/arca" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl overflow-hidden flex items-center justify-center w-[160px] h-[60px] hover:scale-105 transition-transform shadow-sm">
-                                <Image
-                                    src="/services/arca.webp"
-                                    alt="ARCA"
-                                    width={160}
-                                    height={60}
-                                    className="w-full h-full object-cover"
-                                />
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Column 4: Contact */}
+                    {/* Column 3: Contact */}
                     <div>
                         <h3 className="text-white font-bold text-lg mb-6">Contacto</h3>
                         <ul className="space-y-6">
@@ -102,7 +60,43 @@ const Footer = ({ className = '' }: FooterProps) => {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                {/* Logo with Liquid Glass effect — centrado debajo del contenido */}
+                <div className="mt-16 flex justify-center">
+                    <Link href="/" className="group relative inline-flex items-center justify-center px-8 py-5 rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.03]"
+                        style={{
+                            background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(51,201,244,0.06) 50%, rgba(255,255,255,0.08) 100%)',
+                            backdropFilter: 'blur(20px) saturate(1.8)',
+                            WebkitBackdropFilter: 'blur(20px) saturate(1.8)',
+                            border: '1px solid rgba(255,255,255,0.18)',
+                            boxShadow: '0 8px 32px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(0,0,0,0.2), 0 0 40px rgba(51,201,244,0.08)',
+                        }}
+                    >
+                        {/* Inner liquid highlight */}
+                        <span
+                            className="absolute inset-0 rounded-2xl pointer-events-none"
+                            style={{
+                                background: 'radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.18) 0%, transparent 60%)',
+                            }}
+                        />
+                        {/* Subtle colour tint shimmer on hover */}
+                        <span
+                            className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                            style={{
+                                background: 'radial-gradient(ellipse at 70% 80%, rgba(51,201,244,0.15) 0%, transparent 60%)',
+                            }}
+                        />
+                        <Image
+                            src="/logo.png"
+                            alt="Global International Trade Logo"
+                            width={300}
+                            height={118}
+                            className="relative z-10 w-52 h-auto"
+                        />
+                    </Link>
+                </div>
+
+                {/* Bottom bar */}
+                <div className="border-t border-gray-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-xs text-gray-500 text-center md:text-left">
                         © {new Date().getFullYear()} Global International Trade. Todos los derechos reservados.
                     </p>
@@ -114,5 +108,6 @@ const Footer = ({ className = '' }: FooterProps) => {
         </footer>
     )
 }
+
 
 export default Footer

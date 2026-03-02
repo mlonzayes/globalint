@@ -17,8 +17,25 @@ const ClientsSection = () => {
         { id: 11, name: 'UAR', logo: '/clients/uar.png' },
     ];
 
-    // Create a large enough list to ensure seamless scrolling on large screens
-    const tripleClients = [...clients, ...clients, ...clients, ...clients];
+    // Row 2 uses a different order so both rows look visually distinct
+    // (no two logos appear at the same horizontal position simultaneously)
+    const clientsRow2 = [
+        clients[5],  // Enjoy
+        clients[10], // UAR
+        clients[1],  // American Agro
+        clients[8],  // MSC
+        clients[3],  // APM
+        clients[6],  // John Car
+        clients[0],  // ACA
+        clients[9],  // Neumen
+        clients[4],  // Cheeky
+        clients[7],  // Le Pain
+        clients[2],  // American Vial
+    ];
+
+    // Quadruple each row for seamless infinite scroll on large screens
+    const row1 = [...clients, ...clients, ...clients, ...clients];
+    const row2 = [...clientsRow2, ...clientsRow2, ...clientsRow2, ...clientsRow2];
 
     return (
         <section id="clientes" className="w-full py-16 sm:py-24 bg-gray-50 overflow-hidden">
@@ -57,13 +74,13 @@ const ClientsSection = () => {
             </div>
 
             <div className="flex flex-col gap-8">
-                {/* Row 1: Left */}
+                {/* Row 1: scrolls left */}
                 <div className="relative w-full overflow-hidden pause-on-hover">
                     <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
                     <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
 
                     <div className="flex animate-scroll-left gap-12 sm:gap-24 px-12">
-                        {tripleClients.map((client, index) => (
+                        {row1.map((client, index) => (
                             <div
                                 key={`r1-${index}`}
                                 className="relative w-32 h-24 sm:w-48 sm:h-32 flex-shrink-0 transition-all duration-300 hover:scale-105 cursor-pointer flex items-center justify-center p-4 group"
@@ -78,13 +95,13 @@ const ClientsSection = () => {
                     </div>
                 </div>
 
-                {/* Row 2: Right */}
+                {/* Row 2: scrolls right — different client order */}
                 <div className="relative w-full overflow-hidden pause-on-hover">
                     <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
                     <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
 
                     <div className="flex animate-scroll-right gap-12 sm:gap-24 px-12">
-                        {tripleClients.map((client, index) => (
+                        {row2.map((client, index) => (
                             <div
                                 key={`r2-${index}`}
                                 className="relative w-32 h-24 sm:w-48 sm:h-32 flex-shrink-0 transition-all duration-300 hover:scale-105 cursor-pointer flex items-center justify-center p-4 group"

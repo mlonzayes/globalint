@@ -203,7 +203,7 @@ const CustomsOperations = () => {
             image: "/services/exportacion.jpg"
         },
         {
-            title: "Tramitación ante Terceros",
+            title: "Tramitación ante Terceros Organismos",
             desc: "Realizamos gestiones ante todos los organismos competentes (SENASA, ANMAT, INAL, Secretaria de Industria y Comercio,  cámaras, otros), garantizando el cumplimiento normativo y la agilidad en cada operación.",
             image: "/services/tramitacion_terceros.jpg"
         }

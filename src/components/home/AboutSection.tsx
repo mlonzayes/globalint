@@ -74,9 +74,9 @@ const AboutSection = () => {
                     >
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl group w-full max-w-xs sm:max-w-sm lg:max-w-[320px] mx-auto">
                             <img
-                                src="/about/quienes_somos.jpeg"
+                                src="/about/about.png"
                                 alt="Oficina de Global International Trade"
-                                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 brightness-110 contrast-125"
+                                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                             />
                         </div>
 
