@@ -69,7 +69,7 @@ const ClientsSection = () => {
                     viewport={{ once: true }}
                     className="text-3xl sm:text-4xl lg:text-5xl font-medium text-[#0F1D23]"
                 >
-                    Nuestros clientes
+                    Algunos de nuestros clientes
                 </motion.h2>
             </div>
 

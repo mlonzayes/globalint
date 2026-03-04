@@ -16,7 +16,29 @@ const Footer = ({ className = '' }: FooterProps) => {
 
                     {/* Column 1: Brand & Socials */}
                     <div className="flex flex-col items-start gap-6">
-                        <p className="text-white font-bold text-lg">Global International Trade</p>
+                        <Link href="/" className="group relative inline-flex items-center justify-center px-6 py-4 rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.03]"
+                            style={{
+                                background: 'linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.65) 100%)',
+                                backdropFilter: 'blur(20px) saturate(1.8)',
+                                WebkitBackdropFilter: 'blur(20px) saturate(1.8)',
+                                border: '1px solid rgba(255,255,255,0.8)',
+                                boxShadow: '0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.8)',
+                            }}
+                        >
+                            <span
+                                className="absolute inset-0 rounded-2xl pointer-events-none"
+                                style={{
+                                    background: 'radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.8) 0%, transparent 60%)',
+                                }}
+                            />
+                            <Image
+                                src="/logo.png"
+                                alt="Global International Trade Logo"
+                                width={300}
+                                height={118}
+                                className="relative z-10 w-48 h-auto"
+                            />
+                        </Link>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                             Tu socio estratégico en comercio exterior. Soluciones integrales para potenciar tu negocio global.
                         </p>
@@ -58,41 +80,6 @@ const Footer = ({ className = '' }: FooterProps) => {
                             </li>
                         </ul>
                     </div>
-                </div>
-
-                {/* Logo with Liquid Glass effect — centrado debajo del contenido */}
-                <div className="mt-16 flex justify-center">
-                    <Link href="/" className="group relative inline-flex items-center justify-center px-8 py-5 rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.03]"
-                        style={{
-                            background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(51,201,244,0.06) 50%, rgba(255,255,255,0.08) 100%)',
-                            backdropFilter: 'blur(20px) saturate(1.8)',
-                            WebkitBackdropFilter: 'blur(20px) saturate(1.8)',
-                            border: '1px solid rgba(255,255,255,0.18)',
-                            boxShadow: '0 8px 32px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(0,0,0,0.2), 0 0 40px rgba(51,201,244,0.08)',
-                        }}
-                    >
-                        {/* Inner liquid highlight */}
-                        <span
-                            className="absolute inset-0 rounded-2xl pointer-events-none"
-                            style={{
-                                background: 'radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.18) 0%, transparent 60%)',
-                            }}
-                        />
-                        {/* Subtle colour tint shimmer on hover */}
-                        <span
-                            className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                            style={{
-                                background: 'radial-gradient(ellipse at 70% 80%, rgba(51,201,244,0.15) 0%, transparent 60%)',
-                            }}
-                        />
-                        <Image
-                            src="/logo.png"
-                            alt="Global International Trade Logo"
-                            width={300}
-                            height={118}
-                            className="relative z-10 w-52 h-auto"
-                        />
-                    </Link>
                 </div>
 
                 {/* Bottom bar */}
